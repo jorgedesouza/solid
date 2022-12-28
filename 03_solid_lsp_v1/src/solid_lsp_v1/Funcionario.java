@@ -1,6 +1,6 @@
 package solid_lsp_v1;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	private float salario;
     private String cargo;
@@ -11,6 +11,9 @@ public class Funcionario {
 		this.cargo = cargo;
 		this.nome = nome;
 	}
+	
+	abstract float calcularSalario();
+
 
 	public float getSalario() {
 		return salario;
@@ -36,12 +39,5 @@ public class Funcionario {
 		this.nome = nome;
 	}
 
-	public float calcularSalarioGerente() {
-		return salario;
-	}
-
-	public float calcularSalarioVendedor() {
-		return salario;
-	}
-    
+	    
 }

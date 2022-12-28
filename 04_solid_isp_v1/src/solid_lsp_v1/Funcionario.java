@@ -14,9 +14,7 @@ public abstract class Funcionario {
 
 	//Métodos abstratos
 	abstract float calcularSalario();
-	abstract float calcularComissao();
-	abstract float calcularBonus();
-
+	
 	public float getSalario() {
 		return salario;
 	}

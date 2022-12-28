@@ -1,6 +1,6 @@
 package solid_lsp_v1;
 
-class Gerente extends Funcionario {
+public class Gerente extends Funcionario implements BonusAplicavel { 
     
 	private float bonus;
     
@@ -17,21 +17,16 @@ class Gerente extends Funcionario {
 		this.bonus = bonus;
 	}
 
-	// Método Calcular Salário
+	/* Método Calcular Salário */
 	@Override
 	public float calcularSalario(){
         return this.getSalario() + this.calcularBonus();
     }
 
-	// Método Calcular Comissão - Não Implmentado
-	@Override
-	float calcularComissao() {
-		return 0.0f;
-	}
 
 	// Método Calcular Bônus
 	@Override
-	float calcularBonus() {
+	public float calcularBonus() {
 		return this.getSalario() * this.getBonus();
 	}
     

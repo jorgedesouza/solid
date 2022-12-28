@@ -12,16 +12,5 @@ public class AtendenteCaixa extends Funcionario {
 		return this.getSalario();
 	}
 
-	// Método Calcular Comissão - Não Implementado
-	@Override
-	float calcularComissao() {
-		return 0.0f;
-	}
-
-	// Método Calcular Bônus - Não Implmentado
-	@Override
-	float calcularBonus() {
-		return 0.0f;
-	}
-
+	
 }

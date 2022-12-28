@@ -17,7 +17,7 @@ class Gerente extends Funcionario {
 		this.bonus = bonus;
 	}
     
-	public float CalcularSalarioGerente(){
+	public float calcularSalario(){
         return this.getSalario() + bonus;
     }
 }

@@ -1,16 +1,16 @@
-package solid_ocp_v1;
+package solid_srp_v1;
 
 import java.util.Scanner;
 
-public class Principal {
-
+public class TestaLivro {
+	
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		String nomeLivro, nomeAutor, isbn;
 		int ano, quantidade;
-		double preco, porcDesconto, percImposto;
+		double preco, porcDesconto, porcImposto, total;
 			
 		System.out.println("Digite o nome do livro: ");
 		nomeLivro = scan.next();
@@ -34,25 +34,16 @@ public class Principal {
 		porcDesconto = scan.nextDouble();
 		
 		System.out.println("Digite o valor do imposto: ");
-		percImposto = scan.nextDouble();
+		porcImposto = scan.nextDouble();
 				
 		Livro livro = new Livro(nomeLivro, nomeAutor, ano, preco, isbn);
 		
-		Fatura fatura = new Fatura(livro, quantidade, porcDesconto, percImposto);
+		Fatura fatura = new Fatura(livro, quantidade, porcDesconto, porcImposto);
 		
-		ImpressaoDeFatura imprimirfatura = new ImpressaoDeFatura(fatura);
+		ImprimirFatura imprimirfatura = new ImprimirFatura(fatura);
 		
-		PersistenciaEmArquivoPDF persistenciaEmArquivoPdf = new PersistenciaEmArquivoPDF(fatura);
-		
-		PersistenciaEmBD persistenciaEmBD = new PersistenciaEmBD(fatura);
-		
-		persistenciaEmArquivoPdf.salvar(fatura);
-		
-		persistenciaEmBD.salvar(fatura);
-		
-		//imprimirfatura.imprimir();
-		
-		scan.close();
+				
+		imprimirfatura.imprimir();
 	
 	}
 	

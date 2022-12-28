@@ -19,21 +19,14 @@ class FolhaSalarial{
 		this.data = data;
 	}
 
-	public void imprimirFolhaSalarial(List<Funcionario> funcionarios){
+public void imprimirFolhaSalarial(List<Funcionario> funcionarios){
         
 		System.out.println("FOLHA SALARIAL\n");
 		
 		for(Funcionario funcionario : funcionarios){
             
-			 // Erro no Método calcularSalarioGerente()
-            if(funcionario.getCargo() == "Vendedor"){
-                System.out.println("\n" + funcionario.getNome() + " ----- R$" + funcionario.calcularSalarioGerente());
-            }
-            
-            // Erro no Método calcularSalarioVendedor()
-            if(funcionario.getCargo() == "Gerente"){
-                System.out.println("\n" + funcionario.getNome() + " ----- R$" + funcionario.calcularSalarioVendedor());
-            }
+        	System.out.println("\n" + funcionario.getNome() + " ----- R$ " + funcionario.calcularSalario());
+
         }
     } 
 }

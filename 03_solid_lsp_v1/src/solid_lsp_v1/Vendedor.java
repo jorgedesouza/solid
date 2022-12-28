@@ -17,7 +17,7 @@ class Vendedor extends Funcionario{
 		this.comissao = comissao;
 	}
 
-	public float calcularSalarioVendedor(){
+	public float calcularSalario(){
         return this.getSalario() + comissao;
     }
     

@@ -1,7 +1,7 @@
 package solid_lsp_v1;
 
 import java.time.LocalDate;
-import java.util.List;
+
 
 class FolhaSalarial{
     
@@ -19,14 +19,12 @@ class FolhaSalarial{
 		this.data = data;
 	}
 
-	public void imprimirFolhaSalarial(List<Funcionario> funcionarios){
+	public void imprimirFolhaSalarial(Funcionario funcionario){
         
-		System.out.println("FOLHA SALARIAL\n");
+		System.out.println("****************   FOLHA SALARIAL    ****************\n");
 		
-		for(Funcionario funcionario : funcionarios){
-            
+		           
         	System.out.println("\n" + funcionario.getNome() + " ----- R$ " + funcionario.calcularSalario());
 
-        }
     } 
 }

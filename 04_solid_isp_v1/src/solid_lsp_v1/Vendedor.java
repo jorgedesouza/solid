@@ -1,6 +1,6 @@
 package solid_lsp_v1;
 
-class Vendedor extends Funcionario {
+class Vendedor extends Funcionario implements Comissionavel{
 
 	private float totalVendas;
 
@@ -25,13 +25,8 @@ class Vendedor extends Funcionario {
 
 	// Método Calcular Comissão
 	@Override
-	float calcularComissao() {
+	public float calcularComissao() {
 		return this.totalVendas * 0.1f;
 	}
 
-	// Método Calcular Bônus - Não Implmentado
-	@Override
-	float calcularBonus() {
-		return 0.0f;
-	}
 }
